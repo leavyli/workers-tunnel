@@ -9,11 +9,8 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v2
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
+      - name: rust-cargo
+        uses: actions-rs/cargo@v1.0.1   
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@2.0.0
         with:
