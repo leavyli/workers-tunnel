@@ -3,6 +3,8 @@ on:
   push:
   pull_request:
   repository_dispatch:
+env:
+  CARGO_TERM_COLOR: always
 jobs:
   deploy:
     runs-on: ubuntu-latest
